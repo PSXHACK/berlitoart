@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b96be6e9ac.js" crossorigin="anonymous"></script>
+    <script src="java.js" defer></script>
+    <script src="contact.js" defer></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <title>BERLITO ART</title>
+</head>
+<body>
+    <header class="logoheader">
+        <a href="index.html"><img class="berlitologo" src="./images/textferi-logo.png" alt="berlitotxtlogo"></a>
+    </header>
+    <div class="main-color-background">
+        <header class="headernav">
+            <img class="responsivenav" src="/images/navbar-white.png" alt="navbar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="exclusive.html">EXCLUSIVE</a></li>
+                    <li><a href="walls-galery.html">WALLS GALLERY</a></li>
+                    <li><a href="#">AUCTIONS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACTS</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+<!-- modify this form HTML and place wherever you want your form -->
+    <div class="contact">
+            <form
+            action="https://formspree.io/f/mvonwdej"
+            method="POST"
+            >
+            <p class="information-warning-txt">Please contact berlito art for additional information.
+            </p>
+            <label>
+                <input type="name" name="name" placeholder="Your Full Name" required>
+            </label>
+            <label>
+                <input type="number" name="number" min="1" max="22222222222222" step="1" placeholder="Phone Number" required>
+            </label>
+            <label>
+                <input type="Name Painting" name="Name Painting" list="scripts" placeholder="Name Painting" required>
+                <datalist id="scripts">
+                    <option value="none"></option>
+                    <option value="FIRE EYES"></option>
+                    <option value="FEARLESS WOMAN"></option>
+                    <option value="WARRIOR WOMAN"></option>
+                    <option value="SEDUCTIVE WOMAN"></option>
+                    <option value="FENIX"></option>
+                    <option value="INNER BATTLES"></option>
+                    <option value="GOLD AFRICAN WOMAN"></option>
+                    <option value="THE INNER WORLD"></option>
+                    <option value="WOMAN CAMOUFLAGE"></option>
+                    <option value="A WILD UNRULY WOMAN"></option>
+                    <option value="UNION OF THE FOUR ELEMENTS"></option>
+                    <option value="WARRIOR ELEPTHAN"></option>
+                    <option value="THE VIBRATION AND ENERGY OF NUMBERS"></option>
+                    <option value="INNER BATTLES"></option>
+                    <option value="BATTLE WITH AN INNER EMOTIONS"></option>
+                </datalist>
+            </label>
+            <label>
+                <input type="email" name="email" placeholder="Email" required>
+            </label>
+            <label>
+                <textarea name="message" placeholder="Message" required></textarea>
+            </label>
+            <button type="submit"><span class="sp1"></span> Submit</button>
+        </form>
+        <div class="contact-text">
+            <div class="wrapper-logo">
+                <div class="icon">
+                    <div class="tooltip">Instagram</div>
+                    <a href="https://www.instagram.com/mariamberlito/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div id="click2" class="icon">
+                    <div class="tooltip">WhatsApp +995571005300</div>
+                    <a><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <div class="icon">
+                    <div class="tooltip">Twitter</div>
+                    <a href="https://twitter.com/MariamBerlito"><i class="fa-brands fa-twitter"></i></a>
+                </div>                                                                     
+                <div class="icon">
+                    <div class="tooltip">Mail</div>
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZfSJdNHQKzQMjdKvMsRWKZHBfcbjRwrrKnbkKDhZPfJhpWgMppFpfTmnSprjSLCVTnPVB"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+                <div class="icon">
+                    <div class="tooltip">Linkedin</div>
+                    <a href="https://www.linkedin.com/in/mariam-berlito-57a12b216/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="background-color-text">
+                <p class="new-text">Get in touch!</p>
+                <p class="information-warning-txt3">
+                    If you have any questions at all,
+                    feel free to leave me a message
+                    here and I'll 
+                    get back to you
+                    within 24 hours</p>
+                    <p class="new-text">Painter Mariam Berlito</p>
+                    <p class="new-text">Based in Grorgia,Tbilisi </p>
+                     <p class="information-warning-txt4"> 
+                        <a href=""><i class="fa-solid fa-envelope"></i></a> - berlitofficial@gmail.com</p>
+                        <p class="information-warning-txt4"> 
+                            <a href=""><img class="call-image" src="./images/call-image.png"></a> +995571005300</p>
+                        <p class="information-warning-txt3">I am available for commissions
+                        as well as exhibitions</p>
+            </div>
+            <div class="background-color-text">
+                <p class="information-warning-txt2">
+                    Email Us
+                    Send a note to <span id="copytxt" class="text-copy">berlitoartsuport@gmail.com</span> and we'll get back to you as quickly as possible. To make sure you receive our response, be sure to add us to your contact list.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

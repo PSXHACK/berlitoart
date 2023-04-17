@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #3b0813;
+    height: 100vh;
+}
+
+.logoheader {
+    width: 100%;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-width: 8px;
+    border-top-style: outset;
+    border-top-color: rgb(19, 3, 3);
+    border-bottom-width: 3px;
+    border-bottom-style: outset;
+    border-bottom-color: rgb(153, 16, 16);
+    background-color: white;
+}
+
+.berlitologo {
+    width: 200px;
+    outline: 100px;
+    transform: translateY(-50px);
+    animation: moveUp 1.5s forwards;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.responsivenav {
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+.headernav {
+    display: flex;
+}
+
+nav {
+    width: auto;
+    display: flex;
+}
+
+@keyframes moveUp {
+    to {
+      transform: translateY(0px);
+      transform: translatex(0px);
+      opacity: 1;
+    }
+}
+
+nav ul {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0 15px;
+}
+
+nav ul li a {
+    font-size: 17px;
+    color: rgb(247, 216, 210);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 1s;
+    position: relative;
+    box-shadow: 3px 5px 25px black;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    border-radius: 10px;
+    background-color: white;
+    transition: 0.5s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 750px) {
+    .responsivenav {
+      display: block;
+      margin-left: 30px;
+      z-index: 156;
+      cursor: pointer;
+    }
+    nav {
+        position: absolute;
+        width: 40%;
+        height: 59vh;
+        background-color: rgb(53, 9, 9, 0.7);
+        z-index: 155;
+        overflow: hidden;
+        left: -115%;
+        display: block;
+        transition: 1s;
+        opacity: 0;
+        top: 20%;
+        border-radius: 0 5px 5px 0;
+      }
+    nav.active {
+        opacity: 1;
+        left: 0%;
+    }
+    nav ul {
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 90px;
+    }
+    nav ul li{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0;
+    }
+    nav ul li a {
+      font-size: 17px;
+      text-decoration: center;
+    }
+    .berlitologo {
+        width: 250px;
+    }
+}
+
+.box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.box img {
+    max-width: 18%;
+    height: auto;
+    cursor: zoom-in;
+    transition: .3s all;
+    box-shadow: 10px 25px 35px rgba(0, 0, 0, 0.904);
+}
+
+.box img:hover {
+    max-width: 17%;
+}
+
+#modal {
+    position: absolute;
+    visibility: hidden;
+    top: 0%;
+    left: -104%;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 9990;
+    background-color: rgba(34, 34, 34, 0.7);;
+    transition: 1s all;
+    opacity: 0;
+
+}
+
+#modal img {
+    max-height: 90%;
+    max-width: calc(100% - 100px);
+    transition: all ease-in-out 1s;
+    opacity: 0;
+    box-shadow: 8px 15px 25px black;
+}
+
+@media (max-width: 550px) {
+    #modal img {
+        max-width: calc(100% - 40px);
+    }
+}
+
+.close {
+    position: fixed;
+    top: 30px;
+    right: -23px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 1px 7px;
+    border: none;
+    background: none;
+    color: white;
+    transition: 1.1s all;
+    box-shadow: 4px 7px 20px black;
+}
+
+#modal.active .close {
+    right: 30px;
+}
+
+#modal.active {
+    display: flex;
+    left: 0%;
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (max-width: 500px) {
+    .box {
+        gap: 25px;
+    }
+}

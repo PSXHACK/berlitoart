@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fire-eyes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@200&display=swap" rel="stylesheet">
+    <script src="java.js" defer></script>
+    <title>BERLITO ART</title>
+</head>
+<body>
+    <header class="logoheader">
+        <a href="index.html"><img class="berlitologo" src="./images/berlitotxtlogo.png" alt="berlitotxtlogo"></a>
+    </header>
+    <div class="main-color-background">
+        <header class="headernav">
+            <img class="responsivenav" src="/images/navbar.png" alt="navbar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="exclusive.html">EXCLUSIVE</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="walls-galery.html">WALLS GALLERY</a></li>
+                    <li><a href="#">AUCTIONS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="#">CONTACTS</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="content">
+        <div class="main-content">
+            <div class="all-content-start">
+                <div class="big-image">
+                    <img class="image-1" src="./images/64DA3605-5664-401F-BC53-163E4A9B2A00.jpeg">
+                </div>
+                <div class="all-about">
+                    <div class="saxeli">
+                        WARRIOR WOMAN
+                    </div>
+                    <div class="fasi">
+                        €12,000.00
+                    </div>
+                    <div class="naxatis-shecvla">
+                        <img class="shecvla-naxati1" src="./images/64DA3605-5664-401F-BC53-163E4A9B2A00.jpeg">
+                        <img class="shecvla-naxati1" src="./images/warwom1.jpeg">
+                        <img class="shecvla-naxati1" src="./images/warwom2.jpeg">
+                        <img class="shecvla-naxati1" src="./images/warwom3.jpeg">
+                        <img class="shecvla-naxati1" src="./images/warwom4.jpg">
+                    </div>
+                    <div class="purchase">
+                        <a href="contact.html"><button>Purchase</button></a>
+                    </div>
+                    <div class="gadasvla">
+                        <div class="gadasvla2">
+                            <button id="additional">Additional information</button>
+                            <button id="description">Description</button>
+                        </div>
+                        <p id="text"></p>
+                    </div>
+                    <div class="info-art-text">
+                        To view more images & videos head over to my instagram ! <a class="mariam-instagram" href="https://www.instagram.com/mariamberlito/">@MariamBerlito</a>
+                    </div>
+                </div>
+                <div class="abouts-text">
+                    A woman warrior is someone who defends core feminine values. She may stand up in defense of children’s rights, lead humanitarian efforts, go on peace missions or stand as a protector of the environment. Whatever her role, she achieves greatness by standing her ground and pushing for change.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img id="bigchangeimg" src="./images/1A124E2F-C4CB-4CB4-A646-F27BF8EB8D24.jpeg">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $(".shecvla-naxati1").click(function(){              
+                $(".image-1").attr('src',this.src);
+            })
+        })
+
+        document.getElementById("description").onclick = function() {
+            document.getElementById("text").innerHTML = "Dimensions - 130 / 1m";
+        }
+
+        document.getElementById("additional").onclick = function() {
+            document.getElementById("text").innerHTML = "Mixed technique on canvas Oil, asrylic colors Shards of gold glittering leaf natural coal, High Quality";
+        }
+
+        document.querySelector(".image-1").onclick = function() {
+        let src = document.querySelector(".image-1").getAttribute("src");
+        document.getElementById("bigchangeimg").setAttribute("src", src);
+        document.getElementById("bigchangeimg").style.opacity = 1;
+        document.getElementById("bigchangeimg").style.top = 6 + "%";
+        }
+        document.getElementById("bigchangeimg").onclick = function() {
+            document.getElementById("bigchangeimg").style.top = 230 + "%";
+            document.getElementById("bigchangeimg").style.opacity = 0;
+        }
+    </script>
+</body>
+</html>

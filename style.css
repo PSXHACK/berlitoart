@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    user-select: none;
+}
+
+body {
+    background-color: #3b0813;
+}
+
+.logoheader {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-width: 8px;
+    border-top-style: outset;
+    border-top-color: rgb(19, 3, 3);
+    border-bottom-width: 3px;
+    border-bottom-style: outset;
+    border-bottom-color: rgb(153, 16, 16);
+    background-color: white;
+}
+
+.berlitologo {
+    width: 240px;
+    outline: 100px;
+    transform: translateY(-50px);
+    animation: moveUp 1.5s forwards;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.responsivenav {
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+.headernav {
+    display: flex;
+}
+
+nav {
+    width: auto;
+    display: flex;
+}
+
+@keyframes moveUp {
+    to {
+      transform: translateY(0px);
+      transform: translatex(0px);
+      opacity: 1;
+    }
+}
+
+nav ul {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0 15px;
+}
+
+nav ul li a {
+    font-size: 17px;
+    color: rgb(247, 216, 210);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 1s;
+    position: relative;
+    box-shadow: 3px 5px 25px black;
+}
+
+nav ul li a:hover {
+    color: #444;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    border-radius: 10px;
+    background-color: white;
+    transition: 0.5s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.video-page {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: -50px;
+    gap: 15px;
+    background-color: #1b1b1b;
+}
+
+#my-video {
+    box-shadow: 7px 12px 20px black;
+}
+
+.my-photo {
+    width: 40%;
+    height: auto;
+    box-shadow: 7px 12px 20px black;
+}
+
+.my-photo2 {
+    width: 25%;
+    height: auto;
+    box-shadow: 7px 12px 20px black;
+}
+
+.wrap-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.wrap-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-text {
+    width: 200px;
+}
+
+.video1 {
+    width: 90%;
+    height: auto;
+    transform: translateX(200px);
+    opacity: 0;
+    animation: moveUp 1.5s forwards;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.slider {
+    height: 650px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider .slide-track {
+    -webkit-animation: scroll 10s linear infinite;
+    animation: scroll 10s linear infinite;
+    display: flex;
+    width: calc(410px * 14);
+    gap: 30px;
+}
+
+.slider .slide {
+    height: 650px;
+    width: 550px;
+}
+
+.slider .slide img {
+    width: 94%;
+    height: 580px;
+    border-radius: 10px;
+    box-shadow: 7px 12px 20px black;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-350px * 5));
+    }
+}
+
+@-webkit-keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-350px * 5));
+    }
+}
+
+@media (max-width: 750px) {
+    .responsivenav {
+      display: block;
+      margin-left: 30px;
+      z-index: 156;
+      cursor: pointer;
+    }
+    nav {
+        position: absolute;
+        width: 40%;
+        height: 59vh;
+        background-color: rgb(53, 9, 9, 0.7);
+        z-index: 155;
+        overflow: hidden;
+        left: -115%;
+        display: block;
+        transition: 1s;
+        opacity: 0;
+        top: 20%;
+        border-radius: 0 5px 5px 0;
+      }
+      nav.active {
+          opacity: 1;
+          left: 0%;
+    }
+    nav ul {
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 90px;
+    }
+    nav ul li{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0;
+    }
+    nav ul li a {
+      font-size: 17px;
+      text-decoration: center;
+    }
+    .berlitologo {
+        width: 230px;
+    }
+    .wrapper {
+        margin-top: -88px;
+        display: flex;
+    }
+    .slider .slide img {
+        width: 100%;
+        height: 650px;
+    }
+    .slider .slide {
+        height: 650px;
+        width: 550px;
+    }
+    .slider .slide-track {
+        width: calc(410px * 14);
+        gap: 30px;
+    }
+    .slider {
+        height: 650px;
+        width: 100%;
+    }
+    .video1 {
+        width: 400px;
+        height: auto;
+    }
+    .my-photo {
+        width: 100%;
+        height: auto;
+    }
+    .wrap-photo {
+        margin-left: 0px;
+        flex-direction: column;
+    }
+    .my-photo2 {
+        width: 100%;
+        height: auto;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a84b4b;
+    border-radius: 50%;
+}

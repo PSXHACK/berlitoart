@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    user-select: none;
+}
+
+body {
+    background-color: rgb(20, 20, 20);
+    width: 100%;
+    height: 100vh;
+}
+
+.logoheader {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(27, 1, 1);
+}
+
+.berlitologo {
+    width: 240px;
+    outline: 100px;
+    transform: translateY(-50px);
+    animation: moveUp 1.5s forwards;
+    opacity: 0;
+    cursor: pointer;
+}
+
+nav {
+    width: auto;
+}
+
+@keyframes moveUp {
+    to {
+      transform: translateY(0px);
+      transform: translatex(0px);
+      opacity: 1;
+    }
+}
+
+nav ul {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0 15px;
+}
+
+nav ul li a {
+    font-size: 17px;
+    color: rgb(247, 216, 210);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 1s;
+    position: relative;
+    box-shadow: 5px 8px 25px black;
+}
+
+nav ul li a:hover {
+    color: rgb(27, 1, 1);
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    border-radius: 10px;
+    background-color: white;
+    transition: 0.5s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.main-color-background {
+    overflow: hidden;
+}
+
+.responsivenav {
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+.headernav {
+    display: flex;
+    height: 40px;
+}
+
+
+@media (max-width: 750px) {
+    .responsivenav {
+      display: block;
+      margin-left: 30px;
+      z-index: 156;
+      cursor: pointer;
+    }
+    nav {
+        position: absolute;
+        width: 40%;
+        height: 59vh;
+        background-color: rgb(53, 9, 9, 0.7);
+        z-index: 155;
+        overflow: hidden;
+        left: -115%;
+        display: block;
+        transition: 1s;
+        opacity: 0;
+        top: 20%;
+        border-radius: 0 5px 5px 0;
+      }
+      nav.active {
+          opacity: 1;
+          left: 0%;
+    }
+    nav ul {
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 90px;
+    }
+    nav ul li{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0;
+    }
+    nav ul li a {
+      font-size: 17px;
+      text-decoration: center;
+    }
+    .berlitologo {
+        width: 200px;
+    }
+    .logoheader {
+        height: 70px;
+    }
+    .exclusive-photos {
+        gap: 80px;
+        margin-top: 10px;
+    }
+    .logoheader {
+        height: 50px;
+    }
+}
+
+.content-start {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.content-wrap {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    height: 95vh;
+}
+
+.content-work {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 55px;
+    margin-top: 4rem;
+}
+
+.img-charcho {
+    border: 1px solid white;
+    padding: 20px;  
+}
+
+.img-work {
+    width: 300px;
+    height: 500px;
+    margin-top: -66px;
+    box-shadow: 7px 12px 20px black;
+}
+
+.img-auto {
+    width: 300px;
+    height: 400px;
+    margin-top: -66px;
+    box-shadow: 7px 12px 20px black;
+}
+
+.exc-wrap {
+    display: flex;
+    width: auto;
+    height: 20%;
+}
+
+.exc-div {
+    width: auto;
+    height: 100%;
+}
+
+.img-exclusive {
+    width: 25px;
+    height: 150px;
+    margin-left: 10px;
+    margin-top: -20px;
+    box-shadow: 7px 12px 20px black;
+}
+
+.img-exclusive-sigrdze {
+    width: 20px;
+    height: 130px;
+    margin-left: 10px;
+    margin-top: -20px;
+    box-shadow: 7px 12px 20px black;
+}
+
+.img-sigrdze {
+    width: 500px;
+    height: auto;
+    margin-top: -66px;
+    box-shadow: 7px 12px 20px black;
+}
+
+.saxeli-fasi {
+    width: 100%;
+    height: auto;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    margin-top: 10px;
+}
+
+.fasi {
+    color: rgb(197, 189, 189);
+    font-size: 19px;
+    font-weight: 100;
+}
+
+.fasi-dapataraveba {
+    font-size: 15px;
+    width: 190px;
+    margin-top: 10px;
+}
+
+@media (max-width: 810px) {
+    .content-work {
+        margin-top: 4rem;
+        gap: 100px;
+    }
+    .img-sigrdze {
+        width: 330px;
+    }
+    body {
+        background-color: rgb(32, 32, 32);
+    }
+}
+
+@media (max-width: 400px) {
+    .img-sigrdze {
+        width: 300px;
+    }
+}

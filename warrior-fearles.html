@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="warrior-fearles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <script src="java.js" defer></script>
+    <title>BERLITO ART</title>
+</head>
+<body>
+    <header class="logoheader">
+        <a href="index.html"><img class="berlitologo" src="./images/berlitotxtlogo.png" alt="berlitotxtlogo"></a>
+    </header>
+    <div class="main-color-background">
+        <header class="headernav">
+            <img class="responsivenav" src="/images/navbar-white.png" alt="navbar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="exclusive.html">EXCLUSIVE</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="walls-galery.html">WALLS GALLERY</a></li>
+                    <li><a href="#">AUCTIONS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="#">CONTACTS</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="content">
+        <div class="main-content">
+            <div class="all-content-start">
+                <div class="big-image">
+                    <img class="image-1" src="./images/1A124E2F-C4CB-4CB4-A646-F27BF8EB8D24.jpeg">
+                </div>
+                <div class="all-about">
+                    <div class="saxeli">
+                        Fenix-Woman Girls
+                    </div>
+                    <div class="fasi">
+                        $15,000.00
+                    </div>
+                    <div class="naxatis-shecvla">
+                        <img class="shecvla-naxati1" src="./images/1A124E2F-C4CB-4CB4-A646-F27BF8EB8D24.jpeg">
+                        <img class="shecvla-naxati1" src="./images/fire-eyes-1.jpeg">
+                        <img class="shecvla-naxati1" src="./images/fire-eyes-2.jpeg">
+                        <img class="shecvla-naxati1" src="./images/fire-eyes-3.jpg">
+                        <img class="shecvla-naxati1" src="./images/fire-eyes-4.jpg">
+                    </div>
+                    <div class="purchase">
+                        <a href="contact.html"><button>Purchase</button></a>
+                    </div>
+                    <div class="info-art-text">
+                        To view more images & videos head over to my instagram ! <a class="mariam-instagram" href="https://www.instagram.com/mariamberlito/">@MariamBerlito</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>              
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $(".shecvla-naxati1").click(function(){              
+                $(".image-1").attr('src',this.src);
+            })
+        })
+    </script>
+</body>
+</html>
